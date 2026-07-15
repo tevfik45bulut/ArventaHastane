@@ -1,0 +1,148 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Kayıt Ol | ArventaHastane
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-7">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body p-5">
+
+                <div class="text-center mb-4">
+
+                    <h2 class="fw-bold">
+                        Hasta Kaydı
+                    </h2>
+
+                    <p class="text-muted">
+                        Yeni hesap oluşturun.
+                    </p>
+
+                </div>
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+
+                                {{ form.first_name.label }}
+
+                            </label>
+
+                            {{ form.first_name }}
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+
+                                {{ form.last_name.label }}
+
+                            </label>
+
+                            {{ form.last_name }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            {{ form.email.label }}
+
+                        </label>
+
+                        {{ form.email }}
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            {{ form.phone_number.label }}
+
+                        </label>
+
+                        {{ form.phone_number }}
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+
+                                {{ form.password1.label }}
+
+                            </label>
+
+                            {{ form.password1 }}
+
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="form-label">
+
+                                {{ form.password2.label }}
+
+                            </label>
+
+                            {{ form.password2 }}
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary w-100"
+                        type="submit"
+                    >
+                        Hesap Oluştur
+                    </button>
+
+                </form>
+
+                <hr class="my-4">
+
+                <div class="text-center">
+
+                    Zaten hesabınız var mı?
+
+                    <a href="{% url 'accounts:login' %}">
+                        Giriş Yap
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

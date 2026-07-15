@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <aside class="col-lg-3 col-xl-2 mb-4">
+
+            {% include "includes/dashboard_sidebar.html" %}
+
+        </aside>
+
+        <section class="col-lg-9 col-xl-10">
+
+            {% block dashboard_content %}
+            {% endblock %}
+
+        </section>
+
+    </div>
+
+</div>
+
+{% endblock %}

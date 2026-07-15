@@ -1,0 +1,106 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="mb-4">
+
+    <h2 class="fw-bold">
+        Hoş geldiniz,
+        {{ request.user.full_name }}
+    </h2>
+
+    <p class="text-muted">
+        ArventaHastane yönetim paneline giriş yaptınız.
+    </p>
+
+</div>
+
+<div class="row g-4">
+
+    <div class="col-md-6 col-xl-3">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <small class="text-muted">
+                    Yaklaşan Randevu
+                </small>
+
+                <h2 class="mt-2">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <small class="text-muted">
+                    Laboratuvar Sonucu
+                </small>
+
+                <h2 class="mt-2">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <small class="text-muted">
+                    Reçete
+                </small>
+
+                <h2 class="mt-2">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <small class="text-muted">
+                    Bildirim
+                </small>
+
+                <h2 class="mt-2">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

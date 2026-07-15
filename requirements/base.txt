@@ -1,0 +1,9 @@
+Django>=5.2
+psycopg[binary]
+Pillow
+python-dotenv
+whitenoise
+django-filter
+djangorestframework
+django-crispy-forms
+crispy-bootstrap5
